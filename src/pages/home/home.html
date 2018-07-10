@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center;">
+      Gestão de Produtos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <!-- <ion-item>
+      <ion-label floating="">Id. Produto</ion-label>
+      <ion-input type="number" (ngModelChange)="produto.idProduto = converterNumber($event)" [(ngModel)]="produto.idProduto"></ion-input>
+    </ion-item> -->
+    <ion-item>
+      <ion-label floating="">Descrição Produto</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.descricaoProduto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating="">Quantidade Estoque</ion-label>
+      <ion-input type="number" (ngModelChange)="produto.quantidadeEstoque = converterNumber($event)" [(ngModel)]="produto.quantidadeEstoque"></ion-input>
+    </ion-item>
+  </ion-list>
+
+        <button ion-button full round (click)="cadastrarProdutoSqlite()" color="danger">
+          Cadastrar Produto</button>
+
+          <button ion-button full round (click)="chamaListaProdutos()" color="danger">
+            Buscar Produtos</button>
+
+</ion-content>
